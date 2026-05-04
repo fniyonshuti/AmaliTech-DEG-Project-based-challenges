@@ -595,13 +595,50 @@ body {
 
 /* ==================== Responsive ==================== */
 
+/* Tablets (1024px and below) */
 @media (max-width: 1024px) {
   .sf-info-panel {
     flex: 0 0 240px;
   }
+
+  .sf-header {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .sf-title {
+    font-size: var(--font-size-xl);
+  }
 }
 
+/* Medium devices (768px and below) */
 @media (max-width: 768px) {
+  .sf-layout {
+    height: 100vh;
+  }
+
+  .sf-header {
+    flex-wrap: wrap;
+    padding: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .sf-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .sf-controls {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .sf-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-xs);
+    flex: 1;
+    min-width: 100px;
+  }
+
   .sf-editor-view {
     flex-direction: column;
   }
@@ -615,6 +652,7 @@ body {
     flex: 0 0 200px;
     border-left: none;
     border-top: 2px solid var(--color-accent-primary);
+    overflow-y: auto;
   }
 
   .sf-node {
@@ -624,6 +662,7 @@ body {
 
   .sf-node-text {
     font-size: var(--font-size-xs);
+    min-height: 30px;
   }
 
   .sf-preview-view {
@@ -632,7 +671,100 @@ body {
   }
 
   .sf-chat-message.user {
+    max-width: 85%;
+  }
+
+  .sf-option-btn {
+    padding: var(--spacing-md) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  .sf-header {
+    flex-direction: column;
+    padding: var(--spacing-md);
+  }
+
+  .sf-title {
+    font-size: var(--font-size-base);
+    text-align: center;
+  }
+
+  .sf-controls {
+    width: 100%;
+  }
+
+  .sf-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex: 1;
+    min-height: 40px;
+    touch-action: manipulation;
+  }
+
+  .sf-node {
+    width: 120px;
+    padding: 8px;
+  }
+
+  .sf-node-type {
+    font-size: 10px;
+  }
+
+  .sf-node-text {
+    font-size: 11px;
+    min-height: 25px;
+  }
+
+  .sf-node-edit-btn {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .sf-info-panel {
+    flex: 0 0 150px;
+    padding: var(--spacing-md);
+  }
+
+  .sf-info-panel h3 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .sf-info-row {
+    font-size: 12px;
+  }
+
+  .sf-option-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .sf-chat-message {
+    padding: var(--spacing-md);
+    font-size: 13px;
+  }
+
+  .sf-chat-message.user {
     max-width: 90%;
+  }
+
+  .sf-modal {
+    width: 95%;
+    padding: var(--spacing-lg);
+  }
+
+  .sf-modal h2 {
+    font-size: var(--font-size-lg);
+  }
+
+  .sf-edit-textarea {
+    font-size: 12px;
+    padding: 8px;
   }
 }
 
